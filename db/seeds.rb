@@ -9,4 +9,3 @@
   user = User.create(email: Faker::Internet.email, password: "changeme", password_confirmation: "changeme")
   user.posts.create(title: Faker::Book.author)
 end
-

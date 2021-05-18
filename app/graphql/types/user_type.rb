@@ -8,5 +8,11 @@ module Types
     field :remember_created_at, GraphQL::Types::ISO8601DateTime, null: true
     field :created_at, GraphQL::Types::ISO8601DateTime, null: false
     field :updated_at, GraphQL::Types::ISO8601DateTime, null: false
+    field :posts, [Types::PostType], null: true
+    field :full_name, String, null: false
+    field :posts_count, String, null: false
+    def full_name
+      "#{object.id} #{object.email}"
+    end
   end
 end

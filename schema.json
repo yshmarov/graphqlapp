@@ -205,7 +205,7 @@
           "fields": [
             {
               "name": "post",
-              "description": null,
+              "description": "get post by id",
               "args": [
                 {
                   "name": "id",
@@ -238,7 +238,7 @@
             },
             {
               "name": "posts",
-              "description": null,
+              "description": "list all posts",
               "args": [
 
               ],
@@ -282,7 +282,7 @@
             },
             {
               "name": "user",
-              "description": null,
+              "description": "get user by id",
               "args": [
                 {
                   "name": "id",
@@ -315,7 +315,7 @@
             },
             {
               "name": "users",
-              "description": null,
+              "description": "list all users",
               "args": [
 
               ],

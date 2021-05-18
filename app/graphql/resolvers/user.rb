@@ -1,8 +1,9 @@
 # frozen_string_literal: true
 
 class Resolvers::User < Resolvers::Base
-  type Types::UserType, null: false
+  description 'get user by id'
 
+  type Types::UserType, null: false
   argument :id, ID, required: true
 
   def resolve(id:)

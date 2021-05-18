@@ -25,14 +25,29 @@ type Post {
 }
 
 type Query {
+  """
+  get post by id
+  """
   post(id: ID!): Post!
+
+  """
+  list all posts
+  """
   posts: [Post!]!
 
   """
   An example field added by the generator
   """
   testField: String!
+
+  """
+  get user by id
+  """
   user(id: ID!): User!
+
+  """
+  list all users
+  """
   users: [User!]!
 }
 

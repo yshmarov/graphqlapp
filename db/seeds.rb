@@ -8,3 +8,7 @@
 5.times do
   User.create(email: Faker::Internet.email, password: "changeme", password_confirmation: "changeme")
 end
+
+5.times do
+  Post.create(title: Faker::Book.title)
+end

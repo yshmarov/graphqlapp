@@ -6,9 +6,7 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 5.times do
-  User.create(email: Faker::Internet.email, password: "changeme", password_confirmation: "changeme")
+  user = User.create(email: Faker::Internet.email, password: "changeme", password_confirmation: "changeme")
+  user.posts.create(title: Faker::Book.author)
 end
 
-5.times do
-  Post.create(title: Faker::Book.title)
-end

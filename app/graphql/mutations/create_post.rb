@@ -7,8 +7,9 @@ module Mutations
 
     field :post, Types::PostType, null: false
 
-    def resolve(**attributes)
-      post = Post.create(attributes)
+    def resolve(user_id:, **attributes)
+      user = User.find(user_id)
+      post = user.posts.create(attributes)
       if post.save
         {
           post: post,

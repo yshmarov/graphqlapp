@@ -22,6 +22,26 @@ query User{
   }
 }
 ```
+mutation - update user email
+```
+mutation updateUser($input: UpdateUserInput!) {
+	updateUser(input: $input) {
+    user {
+      id
+      email
+    }
+  } 
+}
+```
++ query variables
+```
+{
+  "input": {
+    "id": 2,
+    "email": "what@ever.coms"
+  }
+}
+```
 
 ```
 rails graphql:schema:dump

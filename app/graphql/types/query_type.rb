@@ -5,6 +5,7 @@ module Types
     include GraphQL::Types::Relay::HasNodesField
 
     field :users, resolver: Resolvers::Users
+    field :user, resolver: Resolvers::User
     # Add root-level fields here.
     # They will be entry points for queries on your schema.
 

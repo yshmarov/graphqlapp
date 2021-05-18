@@ -13,6 +13,15 @@ query Users{
   }
 }
 ```
+get user with id = 1
+```
+query User{
+  user(id: "1") {
+    id
+    email
+  }
+}
+```
 
 ```
 rails graphql:schema:dump

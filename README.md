@@ -167,4 +167,23 @@ create post
   }
 }
 ```
+destroy post - mutation
+```
+mutation destroyPost($input: DestroyPostInput!) {
+  destroyPost(input:$input) {
+    post {
+      id
+    }
+  }
+}
+```
+destroy post - variables
+```
+{
+  "input": {
+    "id": 2
+  }
+}
+```
+
 rails graphql:schema:dump
